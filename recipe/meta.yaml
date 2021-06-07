@@ -1,5 +1,5 @@
 {% set name = "pyrost" %}
-{% set version = "0.3.7" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f6784ada11357b4041f3a786b08e38ac0150a2ba998b9f539edd24ee7975d930
+  sha256: 692a8adfc082ad4d8922cf7059bcbd7abbec8a5ea64c6b41900e9adf143f5baa
 
 build:
   number: 0
@@ -25,14 +25,17 @@ requirements:
     - pip
     - cython
     - gsl
+    - fftw
     - h5py
     - numpy
     - scipy
+    - tqdm
   run:
     - {{ pin_compatible('numpy') }}
     - python
     - scipy
     - h5py
+    - tqdm
 
 test:
   imports:
