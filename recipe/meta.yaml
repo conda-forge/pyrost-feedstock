@@ -1,5 +1,5 @@
 {% set name = "pyrost" %}
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fd8a14955869d18f37c3544b4300318cbf211fb7e84383eb75b6a425791fdee9
+  sha256: 8c537e002affa8336617cb43d1323f95057a0b1c5628881da6370d4631e728e5
 
 build:
   number: 1
